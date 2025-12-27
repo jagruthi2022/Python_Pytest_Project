@@ -1,0 +1,6 @@
+INFO     utils.logger:conftest.py:13 Initializing Chrome WebDriver
+INFO     WDM:logger.py:11 ====== WebDriver manager ======
+INFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+INFO     WDM:logger.py:11 Get LATEST chromedriver version for google-chrome
+INFO     WDM:logger.py:11 Driver [C:\Users\user\.wdm\drivers\chromedriver\win64\143.0.7499.169\chromedriver-win32/THIRD_PARTY_NOTICES.chromedriver] found in cache
+ERROR    utils.logger:conftest.py:25 Failed to initialize Chrome WebDriver: [WinError 193] %1 is not a valid Win32 application
