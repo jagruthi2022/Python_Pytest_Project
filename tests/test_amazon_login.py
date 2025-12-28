@@ -39,3 +39,6 @@ class TestAmazonUrl:
         
         logger.info("Test completed successfully")
         logger.info("=" * 50)
+        amazon_page.sleep(10)  # Wait to observe the logged-in state
+        amazon_page.search_item("i phone 14 pro max")
+        amazon_page.sleep(10)  # Wait to observe the search results

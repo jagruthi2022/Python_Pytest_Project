@@ -3,23 +3,26 @@ INFO     utils.logger:test_amazon_login.py:19 ==================================
 INFO     utils.logger:test_amazon_login.py:20 Starting test_amazon_url
 INFO     utils.logger:test_amazon_login.py:21 ==================================================
 INFO     utils.logger:test_amazon_login.py:27 Step 1-2: Opening Amazon URL, maximizing window and refreshing
-INFO     utils.logger:amazon_login.py:29 Opening Amazon page: https://www.amazon.in/
+INFO     utils.logger:amazon_login.py:39 Opening Amazon page: https://www.amazon.in/
 INFO     utils.logger:base_page.py:18 Opening URL: https://www.amazon.in/
 INFO     utils.logger:base_page.py:23 Maximizing browser window
 INFO     utils.logger:base_page.py:28 Refreshing page
-INFO     utils.logger:amazon_login.py:34 Amazon page opened and window maximized
+INFO     utils.logger:amazon_login.py:44 Amazon page opened and window maximized
 INFO     utils.logger:test_amazon_login.py:33 URL verification passed
 INFO     utils.logger:test_amazon_login.py:36 Step 4: Starting Amazon login process
-INFO     utils.logger:amazon_login.py:38 Hovering over Account & Lists
-INFO     utils.logger:base_page.py:71 Hovered over element: ('id', 'nav-link-accountList-nav-line-1')
-INFO     utils.logger:amazon_login.py:43 Clicking Sign in button
-INFO     utils.logger:amazon_login.py:46 Sign in button clicked
-INFO     utils.logger:amazon_login.py:50 Entering email: gururajking21@gmail.com
-INFO     utils.logger:amazon_login.py:57 Clicking continue button
-INFO     utils.logger:amazon_login.py:63 Entering password
-INFO     utils.logger:amazon_login.py:70 Clicking sign in submit button
-INFO     utils.logger:amazon_login.py:81 Amazon login action completed
+INFO     utils.logger:amazon_login.py:48 Hovering over Account & Lists
+INFO     utils.logger:base_page.py:71 Hovered over element: ('xpath', "//*[@id='nav-link-accountList']")
+INFO     utils.logger:amazon_login.py:53 Clicking Sign in button
+INFO     utils.logger:amazon_login.py:56 Sign in button clicked
+INFO     utils.logger:amazon_login.py:60 Entering email: gururajking21@gmail.com
+INFO     utils.logger:amazon_login.py:67 Email entered successfully
+INFO     utils.logger:amazon_login.py:77 Clicking continue button
+INFO     utils.logger:amazon_login.py:83 Entering password
+INFO     utils.logger:amazon_login.py:90 Clicking sign in submit button
+INFO     utils.logger:amazon_login.py:101 Amazon login action completed
 INFO     utils.logger:test_amazon_login.py:38 Login process completed
 INFO     utils.logger:test_amazon_login.py:40 Test completed successfully
 INFO     utils.logger:test_amazon_login.py:41 ==================================================
+INFO     utils.logger:amazon_login.py:105 we are searching the product
+INFO     utils.logger:amazon_login.py:109 searched for i phone 14 pro max successfully
 INFO     utils.logger:conftest.py:31 Closing WebDriver
