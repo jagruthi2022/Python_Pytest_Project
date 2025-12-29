@@ -1,24 +1,56 @@
-INFO     utils.logger:conftest.py:13 Initializing Chrome WebDriver
-INFO     utils.logger:test_login.py:21 ==================================================
-INFO     utils.logger:test_login.py:22 Starting test_login_logout
-INFO     utils.logger:test_login.py:23 ==================================================
-INFO     utils.logger:test_login.py:29 Step 1-2: Opening URL, maximizing window and refreshing
-INFO     utils.logger:login_page.py:26 Opening login page: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-INFO     utils.logger:test_login.py:33 Step 3-4: Entering credentials and clicking login
-INFO     utils.logger:login_page.py:33 Entering username: Admin
-INFO     utils.logger:login_page.py:40 Entering password
-INFO     utils.logger:login_page.py:47 Clicking login button
-INFO     utils.logger:login_page.py:56 Login action completed
-INFO     utils.logger:login_page.py:76 Login successful - Profile dropdown found
-INFO     utils.logger:test_login.py:38 Login verification passed
-INFO     utils.logger:test_login.py:41 Step 5: Performing logout
-INFO     utils.logger:login_page.py:60 Waiting 5 seconds before logout
-INFO     utils.logger:helper.py:90 Sleeping for 5 seconds
-INFO     utils.logger:login_page.py:63 Clicking profile dropdown
-INFO     utils.logger:login_page.py:67 Clicking logout button
-INFO     utils.logger:login_page.py:70 Logout completed
-INFO     utils.logger:test_login.py:44 Test completed successfully
-INFO     utils.logger:test_login.py:45 ==================================================
-INFO     utils.logger:conftest.py:31 Closing WebDriver
- - ==================================================
-2025-12-27 20:10:55 - utils.logger - INFO - Closing WebDriver
+2025-12-29 16:08:05 - utils.logger - INFO - Initializing Chrome WebDriver
+2025-12-29 16:08:11 - utils.logger - INFO - ==================================================
+2025-12-29 16:08:11 - utils.logger - INFO - Starting test_amazon_url
+2025-12-29 16:08:12 - utils.logger - INFO - ==================================================
+2025-12-29 16:08:12 - utils.logger - INFO - Step 1-2: Opening Amazon URL, maximizing window and refreshing
+2025-12-29 16:08:12 - utils.logger - INFO - Opening Amazon page: https://www.amazon.in/
+2025-12-29 16:08:12 - utils.logger - INFO - Opening URL: https://www.amazon.in/
+2025-12-29 16:08:15 - utils.logger - INFO - Maximizing browser window
+2025-12-29 16:08:15 - utils.logger - INFO - Refreshing page
+2025-12-29 16:08:36 - utils.logger - INFO - Amazon page opened and window maximized
+2025-12-29 16:08:36 - utils.logger - INFO - URL verification passed
+2025-12-29 16:08:36 - utils.logger - INFO - Step 4: Starting Amazon login process
+2025-12-29 16:08:36 - utils.logger - INFO - Hovering over Account & Lists
+2025-12-29 16:08:36 - utils.logger - INFO - Hovered over element: ('xpath', "//*[@id='nav-link-accountList']")
+2025-12-29 16:08:38 - utils.logger - INFO - Clicking Sign in button
+2025-12-29 16:08:42 - utils.logger - INFO - Sign in button clicked
+2025-12-29 16:08:42 - utils.logger - INFO - Entering email: gururajking21@gmail.com
+2025-12-29 16:08:46 - utils.logger - INFO - Email entered successfully
+2025-12-29 16:08:46 - utils.logger - INFO - Clicking continue button
+2025-12-29 16:08:48 - utils.logger - INFO - Entering password
+2025-12-29 16:08:48 - utils.logger - INFO - Clicking sign in submit button
+2025-12-29 16:08:55 - utils.logger - INFO - Amazon login action completed
+2025-12-29 16:08:55 - utils.logger - INFO - Login process completed
+2025-12-29 16:08:56 - utils.logger - INFO - Test completed successfully
+2025-12-29 16:08:56 - utils.logger - INFO - ==================================================
+2025-12-29 16:09:06 - utils.logger - INFO - we are searching the product
+2025-12-29 16:09:07 - utils.logger - INFO - searched for i phone 14 pro max successfully
+2025-12-29 16:09:34 - utils.logger - INFO - Closing WebDriver
+2025-12-29 16:10:08 - utils.logger - INFO - Initializing Chrome WebDriver
+2025-12-29 16:10:12 - utils.logger - INFO - ==================================================
+2025-12-29 16:10:12 - utils.logger - INFO - Starting test_login_logout
+2025-12-29 16:10:12 - utils.logger - INFO - ==================================================
+2025-12-29 16:10:12 - utils.logger - INFO - Step 1-2: Opening URL, maximizing window and refreshing
+2025-12-29 16:10:12 - utils.logger - INFO - Opening URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+2025-12-29 16:10:17 - utils.logger - INFO - Maximizing browser window
+2025-12-29 16:10:17 - utils.logger - INFO - Refreshing page
+2025-12-29 16:10:18 - utils.logger - INFO - Step 3-4: Entering credentials and clicking login
+2025-12-29 16:10:18 - utils.logger - INFO - Entering username: Admin
+2025-12-29 16:10:19 - utils.logger - INFO - Entered text into element: ('name', 'username')
+2025-12-29 16:10:19 - utils.logger - INFO - Entering password
+2025-12-29 16:10:19 - utils.logger - INFO - Entered text into element: ('name', 'password')
+2025-12-29 16:10:19 - utils.logger - INFO - Clicking login button
+2025-12-29 16:10:20 - utils.logger - INFO - Clicked on element: ('css selector', "button[type='submit']")
+2025-12-29 16:10:20 - utils.logger - INFO - Login action completed
+2025-12-29 16:10:22 - utils.logger - INFO - Login successful - Profile dropdown found
+2025-12-29 16:10:22 - utils.logger - INFO - Login verification passed
+2025-12-29 16:10:22 - utils.logger - INFO - Step 5: Performing logout
+2025-12-29 16:10:22 - utils.logger - INFO - Waiting 5 seconds before logout
+2025-12-29 16:10:27 - utils.logger - INFO - Clicking profile dropdown
+2025-12-29 16:10:27 - utils.logger - INFO - Clicked on element: ('css selector', 'p.oxd-userdropdown-name')
+2025-12-29 16:10:27 - utils.logger - INFO - Clicking logout button
+2025-12-29 16:10:29 - utils.logger - INFO - Clicked on element: ('link text', 'Logout')
+2025-12-29 16:10:29 - utils.logger - INFO - Logout completed
+2025-12-29 16:10:29 - utils.logger - INFO - Test completed successfully
+2025-12-29 16:10:30 - utils.logger - INFO - ==================================================
+2025-12-29 16:10:30 - utils.logger - INFO - Closing WebDriver

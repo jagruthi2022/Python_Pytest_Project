@@ -1,28 +1,28 @@
 INFO     utils.logger:conftest.py:13 Initializing Chrome WebDriver
-INFO     utils.logger:test_amazon_login.py:19 ==================================================
-INFO     utils.logger:test_amazon_login.py:20 Starting test_amazon_url
-INFO     utils.logger:test_amazon_login.py:21 ==================================================
-INFO     utils.logger:test_amazon_login.py:27 Step 1-2: Opening Amazon URL, maximizing window and refreshing
-INFO     utils.logger:amazon_login.py:39 Opening Amazon page: https://www.amazon.in/
-INFO     utils.logger:base_page.py:18 Opening URL: https://www.amazon.in/
+INFO     utils.logger:test_login.py:21 ==================================================
+INFO     utils.logger:test_login.py:22 Starting test_login_logout
+INFO     utils.logger:test_login.py:23 ==================================================
+INFO     utils.logger:test_login.py:29 Step 1-2: Opening URL, maximizing window and refreshing
+INFO     utils.logger:base_page.py:18 Opening URL: https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
 INFO     utils.logger:base_page.py:23 Maximizing browser window
 INFO     utils.logger:base_page.py:28 Refreshing page
-INFO     utils.logger:amazon_login.py:44 Amazon page opened and window maximized
-INFO     utils.logger:test_amazon_login.py:33 URL verification passed
-INFO     utils.logger:test_amazon_login.py:36 Step 4: Starting Amazon login process
-INFO     utils.logger:amazon_login.py:48 Hovering over Account & Lists
-INFO     utils.logger:base_page.py:71 Hovered over element: ('xpath', "//*[@id='nav-link-accountList']")
-INFO     utils.logger:amazon_login.py:53 Clicking Sign in button
-INFO     utils.logger:amazon_login.py:56 Sign in button clicked
-INFO     utils.logger:amazon_login.py:60 Entering email: gururajking21@gmail.com
-INFO     utils.logger:amazon_login.py:67 Email entered successfully
-INFO     utils.logger:amazon_login.py:77 Clicking continue button
-INFO     utils.logger:amazon_login.py:83 Entering password
-INFO     utils.logger:amazon_login.py:90 Clicking sign in submit button
-INFO     utils.logger:amazon_login.py:101 Amazon login action completed
-INFO     utils.logger:test_amazon_login.py:38 Login process completed
-INFO     utils.logger:test_amazon_login.py:40 Test completed successfully
-INFO     utils.logger:test_amazon_login.py:41 ==================================================
-INFO     utils.logger:amazon_login.py:105 we are searching the product
-INFO     utils.logger:amazon_login.py:109 searched for i phone 14 pro max successfully
+INFO     utils.logger:test_login.py:33 Step 3-4: Entering credentials and clicking login
+INFO     utils.logger:login_page.py:30 Entering username: Admin
+INFO     utils.logger:base_page.py:56 Entered text into element: ('name', 'username')
+INFO     utils.logger:login_page.py:35 Entering password
+INFO     utils.logger:base_page.py:56 Entered text into element: ('name', 'password')
+INFO     utils.logger:login_page.py:40 Clicking login button
+INFO     utils.logger:base_page.py:45 Clicked on element: ('css selector', "button[type='submit']")
+INFO     utils.logger:login_page.py:48 Login action completed
+INFO     utils.logger:login_page.py:66 Login successful - Profile dropdown found
+INFO     utils.logger:test_login.py:38 Login verification passed
+INFO     utils.logger:test_login.py:41 Step 5: Performing logout
+INFO     utils.logger:login_page.py:52 Waiting 5 seconds before logout
+INFO     utils.logger:login_page.py:55 Clicking profile dropdown
+INFO     utils.logger:base_page.py:45 Clicked on element: ('css selector', 'p.oxd-userdropdown-name')
+INFO     utils.logger:login_page.py:58 Clicking logout button
+INFO     utils.logger:base_page.py:45 Clicked on element: ('link text', 'Logout')
+INFO     utils.logger:login_page.py:60 Logout completed
+INFO     utils.logger:test_login.py:44 Test completed successfully
+INFO     utils.logger:test_login.py:45 ==================================================
 INFO     utils.logger:conftest.py:31 Closing WebDriver

@@ -7,6 +7,7 @@ class Config:
     
     # Application URLs
     BASE_URL = "https://opensource-demo.orangehrmlive.com/web/index.php/auth/login"
+    AMAZON_URL = "https://www.amazon.in/"
     
     # Browser settings
     BROWSER = "chrome"

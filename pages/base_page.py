@@ -1,7 +1,9 @@
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException
+from selenium.webdriver.common.action_chains import ActionChains
 from utils.logger import Logger
+import time
 
 class BasePage:
     """Base page class with common methods for all page objects"""
@@ -59,3 +61,21 @@ class BasePage:
     def get_title(self):
         """Get page title"""
         return self.driver.title
+    
+    def hover_over_element(self, locator):
+        """Hover over element using ActionChains"""
+        try:
+            element = self.find_element(locator)
+            actions = ActionChains(self.driver)
+            actions.move_to_element(element).perform()
+            self.logger.info(f"Hovered over element: {locator}")
+        except Exception as e:
+            self.logger.error(f"Error hovering over element: {str(e)}")
+            raise
+    
+    def sleep(self, seconds):
+        time.sleep(seconds)
+    
+
+    def quit(self):
+        self.driver.quit()

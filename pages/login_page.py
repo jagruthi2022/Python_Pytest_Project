@@ -2,12 +2,10 @@
 Login Page Object - Contains all elements and actions for login page
 """
 from selenium.webdriver.common.by import By
-from utils.helper import Helper
-from utils.logger import Logger
+from pages.base_page import BasePage
+import time
 
-logger = Logger().get_logger()
-
-class LoginPage:
+class LoginPage(BasePage):
     """Page Object for OrangeHRM Login Page"""
     
     # Locators
@@ -18,63 +16,55 @@ class LoginPage:
     LOGOUT_BUTTON = (By.LINK_TEXT, "Logout")
     
     def __init__(self, driver):
-        self.driver = driver
-        self.helper = Helper()
+        """Initialize the LoginPage with driver and inherit from BasePage"""
+        super().__init__(driver)
     
     def open_login_page(self, url):
         """Navigate to login page"""
-        logger.info(f"Opening login page: {url}")
-        self.driver.get(url)
-        self.driver.maximize_window()
-        self.driver.refresh()
+        self.open_url(url)
+        self.maximize_window()
+        self.refresh_page()
     
     def enter_username(self, username):
         """Enter username"""
-        logger.info(f"Entering username: {username}")
-        element = self.helper.wait_for_element(self.driver, self.USERNAME_INPUT)
-        element.clear()
-        element.send_keys(username)
+        self.logger.info(f"Entering username: {username}")
+        self.enter_text(self.USERNAME_INPUT, username)
     
     def enter_password(self, password):
         """Enter password"""
-        logger.info("Entering password")
-        element = self.helper.wait_for_element(self.driver, self.PASSWORD_INPUT)
-        element.clear()
-        element.send_keys(password)
+        self.logger.info("Entering password")
+        self.enter_text(self.PASSWORD_INPUT, password)
     
     def click_login_button(self):
         """Click login button"""
-        logger.info("Clicking login button")
-        element = self.helper.wait_for_element_clickable(self.driver, self.LOGIN_BUTTON)
-        element.click()
+        self.logger.info("Clicking login button")
+        self.click_element(self.LOGIN_BUTTON)
     
     def do_login(self, username, password):
         """Perform complete login"""
         self.enter_username(username)
         self.enter_password(password)
         self.click_login_button()
-        logger.info("Login action completed")
+        self.logger.info("Login action completed")
     
     def do_logout(self):
         """Perform logout"""
-        logger.info("Waiting 5 seconds before logout")
-        self.helper.sleep(5)
+        self.logger.info("Waiting 5 seconds before logout")
+        time.sleep(5)
         
-        logger.info("Clicking profile dropdown")
-        element = self.helper.wait_for_element_clickable(self.driver, self.PROFILE_DROPDOWN)
-        element.click()
+        self.logger.info("Clicking profile dropdown")
+        self.click_element(self.PROFILE_DROPDOWN)
         
-        logger.info("Clicking logout button")
-        element = self.helper.wait_for_element_clickable(self.driver, self.LOGOUT_BUTTON)
-        element.click()
-        logger.info("Logout completed")
+        self.logger.info("Clicking logout button")
+        self.click_element(self.LOGOUT_BUTTON)
+        self.logger.info("Logout completed")
     
     def is_login_successful(self):
         """Verify login success"""
         try:
-            self.helper.wait_for_element(self.driver, self.PROFILE_DROPDOWN)
-            logger.info("Login successful - Profile dropdown found")
+            self.find_element(self.PROFILE_DROPDOWN)
+            self.logger.info("Login successful - Profile dropdown found")
             return True
         except:
-            logger.error("Login failed - Profile dropdown not found")
+            self.logger.error("Login failed - Profile dropdown not found")
             return False
